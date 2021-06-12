@@ -229,7 +229,7 @@ const resetForm=()=>{ //reset form
     setValue('#month','January');
     setValue('#year','2021');
 }
-// for all the selected value for name (propertyvalue) passed in html, all the elements for name is queried 
+// for all the selected value for name (propertyvalue) passed in html, all the elements for name is queried. 
 const unsetSelectedValues= (propertyValue)=>{
     let allItems= document.querySelectorAll(propertyValue);
     //iterating through loop and converting items.checked=false for unchecking

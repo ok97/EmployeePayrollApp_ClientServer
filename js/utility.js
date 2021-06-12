@@ -14,5 +14,5 @@ const checkStartDate=(startDate)=>{
     let currentDate= new Date();
    
     if(currentDate- startDate<0)  // checking if start date is not a future date
-        throw "Invalid Start Date";
+        throw "Invalid Start Date"; //print
 }

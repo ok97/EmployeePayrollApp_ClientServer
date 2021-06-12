@@ -7,7 +7,6 @@ salary.addEventListener('input',function()
    output.textContent=salary.value;
 });
 
-
 //validation for name
 let employeePayrollObject= new EmployeePayrollData();   
 const name= document.querySelector('#name');

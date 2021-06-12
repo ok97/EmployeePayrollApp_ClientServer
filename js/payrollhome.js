@@ -110,10 +110,10 @@ const createEmployeePayrollJSON = () => {
       if(site_properties.use_local_storage.match("true"))
       {
      
-      localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));  //updating the data into local storage
+      localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));  // Updating the data into local storage
      
 
-      document.querySelector(".emp-count").textContent= empPayrollList.length;  //updating the count of employees here, otherwise refresh will be required to update count
+      document.querySelector(".emp-count").textContent= empPayrollList.length;  // Updating the count of employees here, otherwise refresh will be required to update count
       }       // refresh slows the code, hence update of count is done here only.
       else
       {
