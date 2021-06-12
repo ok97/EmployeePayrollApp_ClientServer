@@ -132,3 +132,12 @@ const createEmployeePayrollJSON = () => {
   }
 
   
+  const update= (node)=>{    // update method to edit the details of employee payroll      
+      let empPayrollData= empPayrollList.find(empData=>empData.id== node.id); // from the array empPayrollList populated while laoding content of page
+      
+      if(!empPayrollData) return; // if emplPayrollData is null, return is applied here and nothing changes
+        
+      localStorage.setItem('editEmp',JSON.stringify(empPayrollData)); //in order to edit details, employee will be redirected to populated employee payroll form  
+      
+      window.location.replace(site_properties.emp_payroll_page); //calling employee payroll form
+  }
