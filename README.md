@@ -1,1 +1,1 @@
-# Employee Payroll App-Client Server
+# Employee Payroll Application-Client Server
