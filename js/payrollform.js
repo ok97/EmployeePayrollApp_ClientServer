@@ -167,7 +167,7 @@ function createAndUpdateStorage() //creating and updating storage
             employeePayrollList.push(employeePayrollObj);  //pushing the employee payroll object from create employee payroll data to array
 
         }  
-        else       // element it needs to be updated
+        else // element it needs to be updated
         {
             
             const index= employeePayrollList.map(empData=>empData.id).indexOf(empPayrollData.id); //finding out the index for particular employee id 
@@ -238,7 +238,7 @@ const unsetSelectedValues= (propertyValue)=>{
     });
 }
 //settext value method sets value for particular class in between opening and closing tags 
-//for ex error tags
+
 const setTextValue=(id,value)=>
 {
     const element= document.querySelector(id);

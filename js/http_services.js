@@ -6,7 +6,8 @@ function makeServiceCall(methodType, url, async = true, data = null) {
                      xhr.readyState+" Status:"+xhr.status);
          if (xhr.status.toString().match('^[2][0-9]{2}$')) {
             resolve(xhr.responseText);
-         } else if (xhr.status.toString().match('^[4,5][0-9]{2}$')) {
+         } else if (xhr.status.toString().match('^[4,5][0-9]{2}$')) 
+         {
             reject({
                status: xhr.status,
                statusText: xhr.statusText
@@ -14,14 +15,16 @@ function makeServiceCall(methodType, url, async = true, data = null) {
             console.log("XHR Failed");
          }
       }
-      xhr.onerror = function () {
+      xhr.onerror = function () 
+      {
         reject({
             status: this.status,
             statusText: xhttp.statusText
         });
       };
       xhr.open(methodType, url, async);
-      if (data) {
+      if (data) 
+      {
          console.log(JSON.stringify(data));
          xhr.setRequestHeader("Content-Type", "application/json");
          xhr.send(JSON.stringify(data));
