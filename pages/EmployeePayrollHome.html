@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Employee Payroll form</title>
+    <link rel="stylesheet" href="../css/EmployeePayrollHome.css">
+    <link rel="icon" href="../assets/images/logo.png">
+</head>
+<body>
+    <!-- UC1:- Ability to create an Employee Payroll System Home Page UI
+               - Note that the Header is exactly same as the Add Employee Payroll form UI. So take it as is. -->
+  <header class= "header-content header">
+    <div class="logo-content">
+      <img src="../assets/images/logo.png" alt= "logo image">
+        <div>
+          <span class= "emp-text">EMPLOYEE</span><br>
+          <span class="emp-text emp-payroll">PAYROLL</span>
+        </div>
+    </div>
+  </header>  
+  <div class="main-content">
+  <!-- UC2:- Ability to create a Header Section with Employee Details and Add Employee button -->
+  <div class="header-content">
+    <div class="emp-detail-text">Employee Details<div class="emp-count">10</div>
+    </div> <!--emp detail text-->
+     <div  style="margin-left: 800px;background-color: white;" ><i class="fa fa-search"></i></div>
+    <a href="../pages/EmployeePayrollApp.html" class="add-button">
+      <img src="../assets/icons/add-24px.svg" alt="">Add User</a>
+  </div> <!--header content-->
+  <div class="table-main">
+      <table id="table-display" class="table">
+        <!-- UC3:- Ability to view Employee Payroll details in a Tabular Format. -->
+        
+      </table>
+  </div><!--table main-->
+</div><!--main content area-->
+<script src="../js/payrollhome.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/site_properties.js"></script>
+<script src="../js/employeePayrollData.js"></script>
+<script src="../js/http_services.js"></script>
+
+</body>
+</html>

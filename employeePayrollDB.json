@@ -1,0 +1,17 @@
+{
+  "EmployeePayrollDB": [
+    {
+      "_name": "Omprakash",
+      "_profilePic": "../assets/profile-images/Ellipse -3.png",
+      "_gender": "Male",
+      "_department": [
+        "HR",
+        "Finance"
+      ],
+      "_salary": "97400",
+      "_note": "Omprakash",
+      "_startDate": "8 June 2021",
+      "id": 1
+    }
+  ]
+}
