@@ -98,13 +98,13 @@ const createEmployeePayrollJSON = () => {
   }
 
  
-  const remove= (node)=>{  // Adding function to delete elements when click on delete icon in actions
+  const remove= (node)=>{  //Adding function to delete elements when click on delete icon in actions.
      
-      let empPayrollData= empPayrollList.find(empData=>empData.id==node.id);  //empPayrollList is array of data which is once all the content of webpage gets loaded
+      let empPayrollData= empPayrollList.find(empData=>empData.id==node.id);  // empPayrollList is array of data which is once all the content of webpage gets loaded
       
       if(!empPayrollData) return;     
       
-      const index= empPayrollList.map(empData=>empData.id).indexOf(empPayrollData.id);  //for finding out index, emppayroll list is converted to array only of id by mapping and then
+      const index= empPayrollList.map(empData=>empData.id).indexOf(empPayrollData.id);  // for finding out index, emppayroll list is converted to array only of id by mapping and then
       
       empPayrollList.splice(index,1); // using splice to remove element from array
       if(site_properties.use_local_storage.match("true"))
@@ -114,7 +114,7 @@ const createEmployeePayrollJSON = () => {
      
 
       document.querySelector(".emp-count").textContent= empPayrollList.length;  // Updating the count of employees here, otherwise refresh will be required to update count
-      }       // refresh slows the code, hence update of count is done here only.
+      }       // Refresh slows the code, hence update of count is done here only.
       else
       {
           const deleteURL= site_properties.server_url+empPayrollData.id.toString();
@@ -128,16 +128,7 @@ const createEmployeePayrollJSON = () => {
                 console.log("DELETE Error status: "+JSON.stringify(error));
             })
       }     
-      createInnerHtml();  //showing updated data of local storage
+      createInnerHtml();  // showing updated data of local storage
   }
 
   
-  const update= (node)=>{    //update method to edit the details of employee payroll      
-      let empPayrollData= empPayrollList.find(empData=>empData.id== node.id); // from the array empPayrollList populated while laoding content of page
-      
-      if(!empPayrollData) return; //if emplPayrollData is null, return is applied here and nothing changes
-        
-      localStorage.setItem('editEmp',JSON.stringify(empPayrollData)); //in order to edit details, employee will be redirected to populated employee payroll form  
-      
-      window.location.replace(site_properties.emp_payroll_page); //calling employee payroll form
-  }
